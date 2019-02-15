@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tc E2N</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+</head>
+<body>
+
+  <section class="Simon">
+
+
+    <!-- Début de la navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bNavbar">
+      <a class="navbar-brand" href="#"><img src="assets/img/tennismanlogo2.jpg" class="blogo"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>Création d'effets
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link bRacket" href="#defileRacket">Raquettes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bWear" href="#defileCloath" >Vêtements</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link bBall" href="#Ball" >Balles</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="buttonPanier" type="submit" data-toggle="modal" data-target="#exampleModalScrollable">Panier</button>
+      </div>
+    </nav>
+    <!-- Fin de la navbar -->
+    <!-- wallpaper -->
+    <!-- <img src="assets/img/tenniswallpaper.jpg" class="bwallpaper" /> -->
+    <!-- /Wallpaper -->
+    <!-- Modal -->
+
+
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalScrollableTitle">Mon Panier</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <!-- TESTS POUR LA FENETRE MODALE -->
+            <!-- test CARD-PRODUIT DANS LA FENETRE MODALE -->
+            <div id="productOne" class="card mb-3" style="max-width: 540px;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="test2.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">RAQUETTE BABOLAT PURE AERO (300 GR) (NEW).</h5>
+                    <p class="card-text"><span>Quantité : </span><span id="amountOne">0</span></p>
+                    <p class="card-text"><span id="priceOne">224.90</span><span> euros.</span></p>
+                    <p class="card-text"><span>Sous total de cet article :</span><span id="subTotalOne"></span></p>
+                    <button type="button" id="addOne">Ajouter</button><button type="button" id="releaseOne">Retirer</button>
+                    <button type="button" id="delOne">Supprimer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- test CARD-PRODUIT DANS LA FENETRE MODALE -->
+
+            <div id="productTwo" >
+              <p>RAQUETTE TECNIFIBRE TFLASH 300 POWERSTAB (300 GR).</p>
+              <p><span id="priceTwo">170.95</span><span> euros</span></p>
+              <p><span>Quantité : </span><span id="amountTwo">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTwo"></span></p>
+              <button type="button" id="addTwo">Ajouter</button><button type="button" id="releaseTwo">Retirer</button>
+              <button type="button" id="delTwo">Supprimer</button>
+            </div>Création d'effets
+
+            <div id="productThree" >
+              <p>RAQUETTE WILSON PRO STAFF RF 97 AUTOGRAPH LAVER CUP EDITION (340 GR) (NEW).</p>
+              <p><span id="priceThree">249.90</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountThree">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalThree"></span></p>
+              <button type="button" id="addThree">Ajouter</button><button type="button" id="releaseThree">Retirer</button>
+              <button type="button" id="delThree">Supprimer</button>
+            </div>
+
+            <div id="productFour" >
+              <p>RAQUETTE Head Radical  TEMPO 300 (300 GR).</p>
+              <p><span id="priceFour">174.90</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountFour">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalFour"></span></p>
+              <button type="button" id="addFour">Ajouter</button><button type="button" id="releaseFour">Retirer</button>
+              <button type="button" id="delFour">Supprimer</button>
+            </div>
+
+            <div id="productFive" >
+              <p>RAQUETTE TECNIFIBRE T-REBOUND TEMPO 265 FIT (265 GR).</p>
+              <p><span id="priceFive">48.95</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountFive">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalFive"></span></p>
+              <button type="button" id="addFive">Ajouter</button><button type="button" id="releaseFive">Retirer</button>
+              <button type="button" id="delFive">Supprimer</button>
+            </div>
+            <div id="productSix" >
+              <p>RAQUETTE HEAD JUNIOR SPEED 25.</p>
+              <p><span id="priceSix">34.90</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountSix">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalSix"></span></p>
+              <button type="button" id="addSix">Ajouter</button><button type="button" id="releaseSix">Retirer</button>
+              <button type="button" id="delSix">Supprimer</button>
+            </div>
+
+            <div id="productSeven" >
+              <p>RAQUETTE TECNIFIBRE JUNIOR BULLIT 19 RS (NEW).</p>
+              <p><span id="priceSeven">47.90</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountSeven">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalSeven"></span></p>
+              <button type="button" id="addSeven">Ajouter</button><button type="button" id="releaseSeven">Retirer</button>
+              <button type="button" id="delSeven">Supprimer</button>
+            </div>
+
+            <div id="productEight" >
+              <p>RAQUETTE BABOLAT NADAL JUNIOR 21.</p>
+              <p><span id="priceEight">21.90</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountEight">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalEight"></span></p>
+              <button type="button" id="addEight">Ajouter</button><button type="button" id="releaseEight">Retirer</button>
+              <button type="button" id="delEight">Supprimer</button>
+            </div>
+
+            <!-- Produit vetement modif Ama  -->
+            <div id="productNine" >
+              <p>T-SHIRT ADIDAS OPEN D'AUSTRALIE PARLEY ZVEREV.</p>
+              <p><span id="priceNine">54</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountNine">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalNine"></span></p>
+              <button type="button" id="addNine">Ajouter</button><button type="button" id="releaseNine">Retirer</button>
+              <button type="button" id="delNine">Supprimer</button>
+            </div>
+            <div id="productTen" >
+              <p>POLO ADIDAS OPEN D'AUSTRALIE PARLEY TSONGA/THIEM.</p>
+              <p><span id="priceTen">63</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountTen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTen"></span></p>
+              <button type="button" id="addTen">Ajouter</button><button type="button" id="releaseTen">Retirer</button>
+              <button type="button" id="delTen">Supprimer</button>
+            </div>
+            <div id="productEleven" >
+              <p>PANTALON ADIDAS T19.</p>
+              <p><span id="priceEleven">40.50</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountEleven">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalEleven"></span></p>
+              <button type="button" id="addEleven">Ajouter</button><button type="button" id="releaseEleven">Retirer</button>
+              <button type="button" id="delEleven">Supprimer</button>
+            </div>
+            <div id="productTwelve" >
+              <p>SHORT ADIDAS MATCHCODE 7 POUCES.</p>
+              <p><span id="priceTwelve">45</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountTwelve">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTwelve"></span></p>
+              <button type="button" id="addTwelve">Ajouter</button><button type="button" id="releaseTwelve">Retirer</button>
+              <button type="button" id="delTwelve">Supprimer</button>
+            </div>
+            <div id="productThirteen" >
+              <p>DEBARDEUR ADIDAS OPEN D'AUSTRALIE PARLEY WOZNIACKI.</p>
+              <p><span id="priceThirteen">45</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountThirteen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalThirteen"></span></p>
+              <button type="button" id="addThirteen">Ajouter</button><button type="button" id="releaseThirteen">Retirer</button>
+              <button type="button" id="delThirteen">Supprimer</button>
+            </div>
+            <div id="productFourteen" >
+              <p>DEBARDEUR ADIDAS T19.</p>
+              <p><span id="priceFourteen">36</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountFourteen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalFourteen"></span></p>
+              <button type="button" id="addFourteen">Ajouter</button><button type="button" id="releaseFourteen">Retirer</button>
+              <button type="button" id="delFourteen">Supprimer</button>
+            </div>
+            <div id="productFifteen" >
+              <p>JUPE ADIDAS T19.</p>
+              <p><span id="priceFifteen">36</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountFifteen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalFifteen"></span></p>
+              <button type="button" id="addFifteen">Ajouter</button><button type="button" id="releaseFifteen">Retirer</button>
+              <button type="button" id="delFifteen">Supprimer</button>
+            </div>
+            <div id="productSixteen" >
+              <p>ROBE ADIDAS OPEN D'AUSTRALIE PARLEY.</p>
+              <p><span id="priceSixteen">90</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountSixteen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalSixteen"></span></p>
+              <button type="button" id="addSixteen">Ajouter</button><button type="button" id="releaseSixteen">Retirer</button>
+              <button type="button" id="delSixteen">Supprimer</button>
+            </div>
+            <!-- Produit vetement modif Ama  -->
+            <!-- Produit Balle modif Ama  -->
+            <div id="productSeventeen" >
+              <p>TUBE DE 3 BALLES DE TENNIS TECNIFIBRE CLUB.</p>
+              <p><span id="priceSeventeen">5.25</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountSeventeen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalSeventeen"></span></p>
+              <button type="button" id="addSeventeen">Ajouter</button><button type="button" id="releaseSeventeen">Retirer</button>
+              <button type="button" id="delSeventeen">Supprimer</button>
+            </div>
+            <div id="productEighteen" >
+              <p>TUBE DE 4 BALLES BABOLAT FRENCH OPEN ALL COURT.</p>
+              <p><span id="priceEighteen">5.95</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountEighteen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalEighteen"></span></p>
+              <button type="button" id="addEighteen">Ajouter</button><button type="button" id="releaseEighteen">Retirer</button>
+              <button type="button" id="delEighteen">Supprimer</button>
+            </div>
+            <div id="productNineteen" >
+              <p>TUBE DE 3 BALLES BABOLAT GREEN.</p>
+              <p><span id="priceNineteen">5.25</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountNineteen">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalNineteen"></span></p>
+              <button type="button" id="addNineteen">Ajouter</button><button type="button" id="releaseNineteen">Retirer</button>
+              <button type="button" id="delNineteen">Supprimer</button>
+            </div>
+            <div id="productTwenty" >
+              <p>SACHET DE 3 BALLES BABOLAT RED FELT.</p>
+              <p><span id="priceTwenty">6.55</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountTwenty">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTwenty"></span></p>
+              <button type="button" id="addTwenty">Ajouter</button><button type="button" id="releaseTwenty">Retirer</button>
+              <button type="button" id="delTwenty">Supprimer</button>
+            </div>
+            <div id="productTwentyOne" >
+              <p>TUBE DE 3 BALLES BABOLAT ORANGE.</p>
+              <p><span id="priceTwentyOne">5.25</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountTwentyOne">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTwentyOne"></span></p>
+              <button type="button" id="addTwentyOne">Ajouter</button><button type="button" id="releaseTwentyOne">Retirer</button>
+              <button type="button" id="delTwentyOne">Supprimer</button>
+            </div>
+            <div id="productTwentyTwo" >
+              <p>CARTON DE 36 TUBES DE 4 BALLES TECNIFIBRE CLUB.</p>
+              <p><span id="priceTwentyTwo">225.10</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountTwentyTwo">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTwentyTwo"></span></p>
+              <button type="button" id="addTwentyTwo">Ajouter</button><button type="button" id="releaseTwentyTwo">Retirer</button>
+              <button type="button" id="delTwentyTwo">Supprimer</button>
+            </div>
+            <div id="productTwentyThree" >
+              <p>BARIL + CARTON DE 72 BALLES HEAD PRO.</p>
+              <p><span id="priceTwentyThree">96.80</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountTwentyThree">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTwentyThree"></span></p>
+              <button type="button" id="addTwentyThree">Ajouter</button><button type="button" id="releaseTwentyThree">Retirer</button>
+              <button type="button" id="delTwentyThree">Supprimer</button>
+            </div>
+            <div id="productTwentyFour" >
+              <p>TUBE DE 4 BALLES WILSON TOUR PREMIER.</p>
+              <p><span id="priceTwentyFour">7.20</span><span> euros.</span></p>
+              <p><span>Quantité : </span><span id="amountTwentyFour">0</span></p>
+              <p><span>Sous total de cet article :</span><span id="subTotalTwentyFour"></span></p>
+              <button type="button" id="addTwentyFour">Ajouter</button><button type="button" id="releaseTwentyFour">Retirer</button>
+              <button type="button" id="delTwentyFour">Supprimer</button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Produit Balle modif Ama  -->
+    <!-- FIN DES TESTS -->
+
+
+    <!-- DIV D'AMANDINE
+    <!-- TOUTE MODIF -->
+    <!-- <div class="modal-body">
+    <div class="Productone">
+    <!-- AJOUT DE LA REFERENCE ET DU PRIX DANS LA FENETRE -->
+    <!-- <div id="basketProduct">produit: </div>
+    <div id="basketPrice">prix: </div>
+    <!-- FIN REFERENCE ET DU PRIX DANS LA FENETRE  -->
+
+    <!-- QUANTITES  -->
+    <!-- <label for="amount">Quantité</label>
+    <input type="Number" name="amount" id="amount" />
+    <input type="button" id="submitBasket" value="Valider">
+    <label for="finalBasket" id="finalBasket" >Nombre de quantité choisie: 1 </label> -->
+
+    <!-- QUANTITES -->
+
+    <!-- Boutton supprimer -->
+    <!-- <input type="button" id="removeProduct" value="Supprimer"> -->
+    <!-- Boutton supprimer -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- TOUTE MODIF -->
+    <!--FIN DIV D'AMANDINE -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+
+
+
+    <!-- fin de la fenetre modale -->
+
+  </section>
+
+  <section class="Kevin">
+    <div class="container-fluide" id="Racket">
+      <h2 class="aTitle" id="defileRacket">Raquette de tennis</h2>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+            <img src="assets/img/raquetteBabolat.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/babolat.png" alt="babolat" />
+            <h5 class="card-title">RAQUETTE BABOLAT PURE AERO (300 GR) (NEW)</h5>
+            <p class="card-text">La raquette Babolat Pure Aero fait peau neuve tout en conservant ses caractéristiques principales. La raquette la plus connue dans le monde pour la qualité de sa prise d'effet revient en conservant les coloris qui
+              ont fait son succès : le jaune et le noir mais en ajoutant une touche nacrée du plus bel effet au soleil. La gamme de raquettes utilisée par Rafael Nadal, Jo-Wilfried Tsonga, Benoit Paire et Caroline Wozniacki conserve sa prise d'effet
+              légendaire tout en se dotant de plus de contrôle.</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsOne" value="224,90"> 224,90 € </span></p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <button type="button" name="Babolat Pure Aero"  value="224,90" class="btn btn-primary add" id="addProductOne">Ajouter au panier</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+          <img src="assets/img/raquetteTechnifibre.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/tecnifibre.png" alt="tecnifibre" />
+            <h5 class="card-title">RAQUETTE TECNIFIBRE TFLASH 300 POWERSTAB (300 GR) </h5>
+            <p class="card-text">La marque française Tecnifibre vous propose la T-Flash 300 Powerstab, bleue, blanche et rouge au design électrique et très moderne. Faites comme les joueurs professionnels de l’ATP World Tour, optez pour ce modèle
+              performant alliant puissance et stabilité à la frappe pour dominer tous vos adversaires !</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsTwo" value="170,95"> 170,95 € </span></p>
+            </div>
+            <button type="button" name="Tecnifibre tflash "   value="170,95" class="btn btn-primary add" id="addProductTwo">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+          <img src="assets/img/raquetteWilson.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/wilson.png" alt="wilson" />
+            <h5 class="card-title">RAQUETTE WILSON PRO STAFF RF 97 AUTOGRAPH LAVER CUP EDITION (340 GR) (NEW)</h5>
+            <p class="card-text"> Créée aux couleurs de la marque Wilson et reprenant l'essence de la gamme, cette Pro Staff 97RF Autograph Laver Cup sera utilisée par le "Maître" durant le tournoi et ne vous laissera pas indifférent. Parfaitement
+              associée au sac
+              Wilson Federer DNA "Infrared", cette raquette montre la détermination et l'envie d'en découdre qui habite toujours Roger Federer lors de ses matchs.
+              Cette édition de la Laver Cup se jouera à Chicago, ville d'origine de la marque américaine.</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsThree" value="249,90">249,90 €</span></p>
+            </div>
+            <button type="button" name="Wilson Pro Staff RF 97"   value="249,90" class="btn btn-primary add" id="addProductThree">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+          <img src="assets/img/raquetteHead.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/head.png" alt="head" />
+            <h5 class="card-title">RAQUETTE Head Radical  TEMPO 300 (300 GR)</h5>
+            <p class="card-text">La gamme Head Radical fait peau neuve et adopte la technologie Graphène Touch afin d’améliorer toujours plus vos sensations de jeu. Dotée d’un design coloré fait d’orange et de bleu, ainsi que d’un logo lisible
+              aussi bien à l’endroit qu’à l’envers, vous conserverez les caractéristiques qui ont fait de ce modèle celui adopté par le joueur britannique Andy Murray.</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsFour" value="174,90"> 174,90 € </span></p>
+            </div>
+            <button type="button" name="Head Radical TEMPO 300"   value="174,90" class="btn btn-primary add" id="addProductFour">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+          <img src="assets/img/raquetteFemme.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/tecnifibre.png" alt="tecnifibre" />
+            <h5 class="card-title">RAQUETTE TECNIFIBRE T-REBOUND TEMPO 265 FIT (265 GR)</h5>
+            <p class="card-text">Créées spécialement pour les femmes, ces raquettes Tecnifibre Rebound sauront vous apporter une grande maniabilité pour un gain en puissance et en prise d'effet grâce à une raquette légèrement plus courte de 1cm.
+              Adoptée par la championne russe Daria Kasatkina, la gamme Rebound Tempo vous assurera des sensations nouvelles pour de meilleures performances.</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsFive" value="48,95"> 48,95 € </span></p>
+            </div>
+            <button type="button" name="TECNIFIBRE T-REBOUND" value="48,95" class="btn btn-primary add" id="addProductFive">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+          <img src="assets/img/raquetteEnfant.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/babolat.png" alt="babolat" />
+            <h5 class="card-title">RAQUETTE HEAD JUNIOR SPEED 25</h5>
+            <p class="card-text">Cette raquette Head reprenant la cosmétique de celle du champion Serbe Novak Djokovic saura satisfaire les juniors pratiquant le tennis en loisir.</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsSix" value="34,90"> 34,90 € </span></p>
+            </div>
+            <button type="button" name=""  value="34,90" class="btn btn-primary add" id="addProductSix">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+          <img src="assets/img/raquetteKid.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/tecnifibre.png" alt="technifibre" />
+            <h5 class="card-title">RAQUETTE TECNIFIBRE JUNIOR BULLIT 19 RS (NEW)</h5>
+            <p class="card-text">Ce modèle est adapté aux juniors pratiquant le tennis en loisir mesurant entre 90cm et 100cm (4-5 ans). Composé en aluminium, elle ofrira légèreté et durabilité afin de commencer la pratique dans de bonnes
+              conditions.
+              Cette raquette dispose d'un poids de 166g et fait 48cm de long afin d'être la plus manibale possible. De plus, cette raquette bénéficie de la technologie Reinforced Structure, qui permet d'avoir un cadre 20% plus résistant par rapport
+              à une section traditionnelle.</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsSeven" value="47,90"> 47,90 €</span></p>
+            </div>
+            <button type="button" name=""  value="47,90" class="btn btn-primary add" id="addProductSeven">Ajouter au panier</button>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bRacketProduct" style="width: 18rem;">
+          <img src="assets/img/raquetteEnfant2.jpg" class="card-img-top" alt="Menraquette">
+          <div class="card-body">
+            <img src="assets/img/babolat.png" alt="babolat" />
+            <h5 class="card-title">RAQUETTE BABOLAT NADAL JUNIOR 21</h5>
+            <p class="card-text">Cette raquette Nadal Babolat junior 21 pouces en aluminium est à la fois légère et robuste. Idéale pour les jeunes joueurs débutant le tennis et mesurant entre 1m et 1m15, ce modèle accompagnera les fans du joueur
+              espagnol Rafael Nadal dans leur progression.</p>
+            <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+              <p>Prix: <span id="aPriceRacketsEight" value="21,90"> 21,90 € </span></p>
+            </div>
+            <button type="button" name="BABOLAT NADAL JUNIOR" value="21,90" class="btn btn-primary add" id="addProductEight">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <section class="Pierre-Louis">
+      <h2 class="aTitle" id="defileCloath">Vêtement de tennis</h2>
+      <div class="container-fluid" id="Clothes">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/teeshirthomme.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">T-SHIRT ADIDAS OPEN D'AUSTRALIE PARLEY ZVEREV</h5>
+              <p class="card-text">Ce t-shirt adidas de tennis parley de l'Australian Open est parfait pour vos matchs de tennis et sera porté par Alexander Zverev lors du premier Grand Chelem de l'année. Il est doté de la technologie Climalite qui vous offre une sensation de fraîcheur grâce à une excellente ventilation et à une bonne gestion de l'humidité. Il possède une coupe slim avec un tissu stretch qui vous suivra dans tous vos mouvements sur le court. Ce t-shirt de tennis est conçu, en collaboration avec Parley, à partir de déchets qui sont recyclés et interceptés des plages et des côtes avant d'atteindre l'océan.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthOne" value="54,00"> 54 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button"  value="5" class="btn btn-primary add" id="addProductNine">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/teeshirthomme2.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">POLO ADIDAS OPEN D'AUSTRALIE PARLEY TSONGA/THIEM</h5>
+              <p class="card-text">Ce polo adidas de tennis parley de l'Australian Open est parfait pour vos matchs de tennis et sera porté par Jo-Wilfried Tsonga et Dominic Thiem lors du premier Grand Chelem de l'année. Il est doté de la technologie Climalite qui vous offre une sensation de fraîcheur grâce à une excellente ventilation et à une bonne gestion de l'humidité. Ce polo de tennis est conçu, en collaboration avec Parley, à partir de déchets qui sont recyclés et interceptés des plages et des côtes avant d'atteindre l'océan. </p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthTwo" value="63,00">63 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" class="btn btn-primary add" id="addProductTen" value="5">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/pantalonhomme1.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">PANTALON ADIDAS T19</h5>
+              <p class="card-text">Ce pantalon de tennis adidas T19 est idéal pour vous entraîner ou récupérer après un match. Conçu en matière douce, ce pantalon adidas offre un grand confort dans vos déplacements. Avec sa coupe fuselée, il vous donne un look à la fois sportif et moderne. Un pantalon de tennis adidas agréable à porter au sport et au quotidien.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthThree" value="40,50"> 40,50 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button"  value="5" class="btn btn-primary add" id="addProductEleven">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/short.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">SHORT ADIDAS MATCHCODE 7 POUCES</h5>
+              <p class="card-text">Ce short adidas Matchcode 7 pouces est parfait pour vos matchs de tennis. Sa technologie Climalite permet d'évacuer la transpiration afin de rester au sec durant vos efforts physiques sur les courts de tennis. Sa taille élastique vous assure un excellent maintien sur les courts de tennis. Côté design, ce short adidas match code possède un coloris uni pour un style dynamique.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthFour" value="45,00"> 45 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button"  value="5" class="btn btn-primary add" id="addProductTwelve">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/débardeurfemme.2jpg.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">DEBARDEUR ADIDAS OPEN D'AUSTRALIE PARLEY WOZNIACKI</h5>
+              <p class="card-text">Cette débardeur de tennis adidas parley de l'Australian Open est parfait pour vos matchs de tennis et sera porté par Caroline Wozniacki et Jelena Ostapenko lors du premier Grand Chelem de l'année. Il est doté de la technologie Climalite qui vous offre une sensation de fraîcheur grâce à une excellente ventilation et à une bonne gestion de l'humidité. Ce débardeur adidas pour femme possède une coupe slim qui vous suivra dans tous vos mouvements sur le court. Ce débardeur de tennis est conçu, en collaboration avec Parley, à partir de déchets qui sont recyclés et interceptés des plages et des côtes avant d'atteindre l'océan. </p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthFive" value="45,00"> 45€</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" value="5" class="btn btn-primary add" id="addProductThirteen">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/débardeurfemme.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">DEBARDEUR ADIDAS T19</h5>
+              <p class="card-text">Ce débardeur adidas est parfait pour vos matchs de tennis ou séances d'entraînement. Sa technologie Climalite vous assure de rester au sec et au frais durant vos efforts sur les courts. Son dos de nageur ainsi que son tissu léger et fluide vous assurent une excellente liberté de mouvements. Côté design, ce débardeur de tennis possède un style original et dynamique. Adoptez ce débardeur adidas femme qui vous permettra de faire la différence avec vos adversaires !</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthSix" value="36,00">36,00 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" value="5" class="btn btn-primary add" id="addProductFourteen">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/jupe.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">JUPE ADIDAS T19</h5>
+              <p class="card-text">Cette jupe adidas est idéale pour vos matchs de tennis. Grâce à son shorty intégré, elle vous permet d'avoir un maintien optimal lors de vos échanges sur le court. Sa technologie Climalite, vous vous permet d'évacuer l'humidité et donc de rester au sec pendant vos efforts. Son style est sobre et uni. Optez pour cette jupe de tennis adidas, c'est avoir le compromis idéal entre confort et performance !</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthSeven" value="36,00"> 36,00 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" value="5" class="btn btn-primary add" id="addProductFifteen">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bWearProduct" style="width: 18rem;">
+            <img src="assets/img/robeadidas.jpg" class="card-img-top" alt="Menraquette">
+            <div class="card-body">
+              <img src="assets/img/adidas.png" alt="babolat" />
+              <h5 class="card-title">ROBE ADIDAS OPEN D'AUSTRALIE PARLEY</h5>
+              <p class="card-text">Cette robe de tennis adidas parley de l'Australian Open est parfaite pour vos matchs de tennis et sera portée par Garbine Muguruza et Kristina Mladenovic lors du premier Grand Chelem de l'année. Elle est dotée de la technologie Climalite qui vous offre une sensation de fraîcheur grâce à une excellente ventilation et à une bonne gestion de l'humidité. Cette robe de tennis adidas pour femme possède une coupe ajustée qui vous permet de bénéficier d'un excellent confort sur les courts de tennis. Elle possède un shorty intégré pour un excellent maintien et un ajustement parfait. Cette robe adidas est conçue, en collaboration avec Parley, à partir de déchets qui sont recyclés et interceptés des plages et des côtes avant d'atteindre l'océan.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priceCthEight" value="90"> 90 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" value="5" class="btn btn-primary add" id="addProductSixteen">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+
+    </section>
+    <section class="Amandine">
+      <h2 class="aTitle" id="Ball">Balle de tennis</h2>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto1.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/tecnifibre.png" alt="babolat" />
+              <h5 class="card-title">TUBE DE 3 BALLES DE TENNIS TECNIFIBRE CLUB</h5>
+              <p class="card-text">Cette balle de tennis vive, confortable et durable est adaptée à tous les niveaux. Elle apporte de la performance pour un usage en compétition. </p>
+                <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                  <p>Prix: <strong id="priseballone" value="5,25"> 5,25 €</strong></p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                  <button type="button" name="BALLES DE TENNIS TECNIFIBRE CLUB" value="5,25" class="btn btn-primary add" id="addProductSeventeen">Ajouter au panier</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto2.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/babolat.png" alt="babolat" />
+              <h5 class="card-title">TUBE DE 4 BALLES BABOLAT FRENCH OPEN ALL COURT</h5>
+              <p class="card-text">La balle de tennis Babolat French Open All Court est une balle pression performante conçue pour être utilisée sur tout type de surfaces. Son feutre extérieur composé du « RUBBER PLAY » et de la technologie « EXTRA DUTY FELT » vous apportera une durée de vie exceptionnelle ainsi qu’un confort optimal à la frappe. Son noyau central est fabriqué avec la technologie « EXTRA PRESSURIZED » pour offrir une balle vive et agréable à jouer.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priseballtwo" value="5,95"> 5,95 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" name="BALLES BABOLAT FRENCH OPEN ALL COURT" value="5,95" class="btn btn-primary add" id="addProductEighteen">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto3.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/babolat.png" alt="babolat" />
+              <h5 class="card-title">TUBE DE 3 BALLES BABOLAT GREEN </h5>
+              <p class="card-text">La balle verte Babolat Green est la dernière étape pour les jeunes joueurs qui continuent leur apprentissage du tennis car elle est 25% plus lente et 10% plus légère qu'une balle classique.
+  Cela permet une vitesse de jeu plus faible pour que les enfants aient le temps de développer leur technique et acquièrent un sentiment positif en disposant d'une balle adaptée à leur rythme de jeu.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priseballthree" value="5,25"> 5,25 € </strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" name="BALLES BABOLAT GREEN" value="5,25" class="btn btn-primary add" id="addProductNineteen">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto4.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/babolat.png" alt="babolat" />
+              <h5 class="card-title">SACHET DE 3 BALLES BABOLAT RED FELT</h5>
+              <p class="card-text">La balle rouge Babolat Red Felt s'adresse aux plus jeunes qui démarrent le tennis car elle est 6% plus grosse et 20% plus légère qu'une balle classique.
+  Cela permet une vitesse de jeu plus faible pour que les enfants aient le temps de développer leur technique et acquièrent un sentiment positif lors de leurs premières heures de jeu.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priseballfour" value="6,50"> 6,55 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" name="BALLES BABOLAT RED FELT" value="6,50" class="btn btn-primary add" id="addProductTwenty">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto5.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/babolat.png" alt="babolat" />
+              <h5 class="card-title">TUBE DE 3 BALLES BABOLAT ORANGE</h5>
+              <p class="card-text">La balle Kid s'intègre dans la gamme initiation de Babolat. </p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priseballfive" value="5,25"> 5,25 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" name="BALLES BABOLAT ORANGE" value="5,25" class="btn btn-primary add" id="addProductTwentyOne">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto6.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/tecnifibre.png" alt="tecnifibre" />
+              <h5 class="card-title">CARTON DE 36 TUBES DE 4 BALLES TECNIFIBRE CLUB</h5>
+              <p class="card-text">Lot de 36 Tube de 4 balles . Cette balle de tennis vive, confortable et durable est adaptée à tous les niveaux. Elle apporte de la performance pour un usage en compétition. </p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priseballsix" value="225,10"> 225,10 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" name="36 TUBES DE 4 BALLES TECNIFIBRE CLUB" value="225,10" class="btn btn-primary add" id="addProductTwentyTwo">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto7.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/head.png" alt="head" />
+              <h5 class="card-title">BARIL + CARTON DE 72 BALLES HEAD PRO</h5>
+              <p class="card-text">Ce carton de 72 balles Head Pro est livré avec un baril.
+  La balle Pro HEAD dispose de caractéristiques de jeu améliorées, du feutre SmartOptik™ pour une meilleure visibilité et d'un mélange de caoutchouc unique pour une excellente durabilité.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priseballseven" value="96,80"> 96,80 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" name="CARTON DE 72 BALLES HEAD PRO" value="96,80" class="btn btn-primary add" id="addProductTwentyThree">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 bBallProduct" style="width: 18rem;">
+            <img src="assets/img/cphoto8.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <img src="assets/img/wilson.png" alt="Wilson" />
+              <h5 class="card-title">TUBE DE 4 BALLES WILSON TOUR PREMIER</h5>
+              <p class="card-text">Les nouvelles balles de tennis Wilson Tour Premier remplace la gamme Australian Open. Si le packaging et le nom changent, vous conservez une qualité de balle intacte et les mêmes sensations de jeu. Une balle durable et performante pour jouer de longues heures avec une même qualité ! Son feutre Optivis offre également une meilleure visibilité sur toutes les surfaces.</p>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <p>Prix: <strong id="priseballeight" value="7,20"> 7,20 €</strong></p>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-md-12 col-lg-12 col-xl-12">
+                <button type="button" name="BALLES WILSON TOUR PREMIER" value="7,20" class="btn btn-primary add" id="addProductTwentyFour">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <section class="footer">
+      <!-- Début footer -->
+      <!-- Footer -->
+      <footer class="page-footer font-small unique-color-dark">
+
+        <div style="background-color: #6351ce;">
+          <div class="container">
+
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                <h6 class="mb-0">Partenaires: </h6>
+              </div>
+
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                <!-- Photo de joueur tennis carrousel photo joueur  -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="imgcarrousel" src="assets/img/federer.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="imgcarrousel" src="assets/img/djokovich.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="imgcarrousel" src="assets/img/serena.jpg" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+
+
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+          </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+          <!-- Grid row -->
+          <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+              <!-- Content -->
+              <h6 class="text-uppercase font-weight-bold">Tennis Club de Noyon</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>1 er fournisseur d'accessoire de tennis depuis 2019, notre entreprise a à coeur de faire de vous de véritable comme nos parrains. Avec TCN la victoire est tienne ! </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Products</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a href="#!">Raquette</a>
+              </p>
+              <p>
+                <a href="#!">Vêtement</a>
+              </p>
+              <p>
+                <a href="#!">Balle de tennis</a>
+              </p>
+
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a href="#!">Nos magasins</a>
+              </p>
+              <p>
+                <a href="#!">Coaching personnalisé</a>
+              </p>
+              <p>
+                <a href="#!">Service client</a>
+              </p>
+
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+              <!-- Links -->
+              <h6 class="text-uppercase font-weight-bold">Newsletter</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+              <p><i class="fas fa-envelope mr-3"></i>Inscrivez votre adresse mail et soyez les 1er informé</p>
+
+                    <input type="text" name="mail" value="" placeholder="tcn@e2n.github.fr">
+                    <button type="button" name="button">envoyer</button>
+
+
+                    <!-- Grid column -->
+
+                  </div>
+                  <!-- Grid row -->
+
+                </div>
+                <!-- Footer Links -->
+                <footer class="text-center">
+    <a href="#ball">
+      <span class="fas fa-chevron-up"></span>
+    </a>
+    <h5>© e2n Noyon</h5>
+  </footer>
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                  <a href="https://mdbootstrap.com/education/bootstrap/"> Tennis Club de Noyon</a>
+                </div>
+                <!-- Copyright -->
+              </div>
+              </footer>
+              <!-- Footer -->
+
+              <!-- fin <footer></footer> -->
+    </section>
+
+  </body>
+</html>

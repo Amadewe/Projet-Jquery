@@ -1,0 +1,63 @@
+.price {
+  font-weight: bold;
+}
+
+.aTitle {
+  text-align: center;
+  background-color: #d0f334;
+  border-radius: 50px;
+  padding-top: 90px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #d30c1e;
+}
+
+.bwallpaper {
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+}
+
+.blogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.bProduct, .bRacketProduct, .bWearProduct, .bBallProduct {
+  background-color: white;
+  margin-top: 75px;
+}
+  /*Permet de faire un zoom sur les images de nos produits */
+  .card-img-top div img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  .card-img-top:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+/* Footer */
+.cover
+{
+  width: 1500px;
+}
+.cardplayer
+{
+margin-right:
+}
+.textfooter
+{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+#backgroundfooter
+{
+  background-color: #75392e;
+}
